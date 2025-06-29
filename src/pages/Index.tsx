@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -189,180 +188,359 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 section-padding">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 gradient-text">About Me</h2>
+      {/* Enhanced About Section */}
+      <section id="about" className="py-20 section-padding relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-10 right-10 w-72 h-72 bg-green-bright/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-green-600/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">About Me</h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-green-bright to-green-600 mx-auto rounded-full"></div>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                I am a frontend developer with a strong passion for crafting stylish, designable websites. 
-                I'm currently pursuing my B.Tech at ABES Institute of Technology and expanding my skills 
-                into backend development.
-              </p>
-              
-              <Card className="bg-card border-border">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-green-bright">Education</h3>
-                  <div className="flex items-start space-x-3">
-                    <BookOpen className="text-green-bright mt-1" size={20} />
-                    <div>
-                      <p className="font-medium">B.Tech (Pursuing)</p>
-                      <p className="text-muted-foreground">ABES Institute of Technology</p>
-                      <p className="text-sm text-green-bright">3rd Year</p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column */}
+            <div className="space-y-8">
+              <div className="relative">
+                <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-green-bright to-green-600 rounded-full"></div>
+                <div className="pl-8">
+                  <h3 className="text-2xl font-semibold mb-4 text-green-bright">My Journey</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    I am a frontend developer with a strong passion for crafting stylish, designable websites. 
+                    I'm currently pursuing my B.Tech at ABES Institute of Technology and expanding my skills 
+                    into backend development.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Every line of code I write is driven by curiosity and the desire to create something 
+                    meaningful. I believe in the power of clean, efficient code and beautiful user experiences.
+                  </p>
+                </div>
+              </div>
+
+              {/* Philosophy Card */}
+              <Card className="bg-gradient-to-br from-card to-card/50 border-green-bright/20 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-green-bright/20 rounded-full flex items-center justify-center">
+                      <Sparkles className="text-green-bright" size={20} />
                     </div>
+                    <h3 className="text-xl font-semibold">Philosophy</h3>
                   </div>
+                  <p className="text-muted-foreground italic">
+                    "Great design is not just what it looks like — it's how it works. I strive to create 
+                    web experiences that are both beautiful and functional."
+                  </p>
                 </CardContent>
               </Card>
             </div>
             
+            {/* Right Column */}
             <div className="space-y-6">
-              <Card className="bg-card border-border hover:border-green-bright transition-colors duration-300">
-                <CardContent className="p-6">
-                  <Code className="text-green-bright mb-3" size={24} />
-                  <h3 className="text-xl font-semibold mb-2">Frontend Focus</h3>
-                  <p className="text-muted-foreground">
-                    Specializing in modern web technologies and responsive design patterns.
-                  </p>
+              {/* Education Card */}
+              <Card className="bg-card/80 border-border hover:border-green-bright/50 transition-all duration-500 group backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-bright/20 to-green-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <BookOpen className="text-green-bright" size={28} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold mb-2 text-green-bright">Education</h3>
+                      <p className="font-medium text-lg">Bachelor of Technology</p>
+                      <p className="text-muted-foreground">ABES Institute of Technology</p>
+                      <div className="mt-3 inline-flex items-center space-x-2 bg-green-bright/10 px-3 py-1 rounded-full">
+                        <div className="w-2 h-2 bg-green-bright rounded-full animate-pulse"></div>
+                        <span className="text-sm text-green-bright font-medium">3rd Year - In Progress</span>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
               
-              <Card className="bg-card border-border hover:border-green-bright transition-colors duration-300">
-                <CardContent className="p-6">
-                  <Globe className="text-green-bright mb-3" size={24} />
-                  <h3 className="text-xl font-semibold mb-2">Always Learning</h3>
-                  <p className="text-muted-foreground">
-                    Currently expanding into backend development to become a full-stack developer.
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Focus Areas */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Card className="bg-card/60 border-border hover:border-green-bright/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-green-bright/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Code className="text-green-bright" size={24} />
+                    </div>
+                    <h3 className="font-semibold mb-2">Frontend Mastery</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Modern web technologies & responsive design
+                    </p>
+                  </CardContent>
+                </Card>
+                
+                <Card className="bg-card/60 border-border hover:border-green-bright/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 bg-green-bright/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Globe className="text-green-bright" size={24} />
+                    </div>
+                    <h3 className="font-semibold mb-2">Full-Stack Vision</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Expanding to backend development
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-20 section-padding bg-muted/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 gradient-text">Skills</h2>
+      {/* Enhanced Skills Section */}
+      <section id="skills" className="py-20 section-padding bg-muted/20 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,136,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,136,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">Skills & Expertise</h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-green-bright to-green-600 mx-auto rounded-full mb-6"></div>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Crafting digital experiences with modern technologies and creative problem-solving
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {/* Skills Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             {skills.map((skill, index) => (
-              <Card key={skill.name} className="bg-card border-border hover:border-green-bright transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <skill.icon className="text-green-bright" size={24} />
-                    <h3 className="text-xl font-semibold">{skill.name}</h3>
+              <Card key={skill.name} className="group bg-card/80 border-border hover:border-green-bright/50 transition-all duration-500 hover:scale-105 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-bright/20 to-green-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <skill.icon className="text-green-bright" size={32} />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold mb-1">{skill.name}</h3>
+                      <p className="text-muted-foreground">Proficiency Level</p>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-3xl font-bold text-green-bright">{skill.level}%</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-secondary rounded-full h-3">
-                    <div 
-                      className="bg-gradient-to-r from-green-bright to-green-600 h-3 rounded-full transition-all duration-1000 ease-out"
-                      style={{ 
-                        width: `${skill.level}%`,
-                        animationDelay: `${index * 0.2}s`
-                      }}
-                    ></div>
+                  
+                  {/* Enhanced Progress Bar */}
+                  <div className="relative">
+                    <div className="w-full bg-secondary/50 rounded-full h-4 overflow-hidden">
+                      <div 
+                        className="bg-gradient-to-r from-green-bright to-green-600 h-full rounded-full relative transition-all duration-1000 ease-out"
+                        style={{ 
+                          width: `${skill.level}%`,
+                          animationDelay: `${index * 0.2}s`
+                        }}
+                      >
+                        <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                      </div>
+                    </div>
                   </div>
-                  <p className="text-right text-sm text-muted-foreground mt-2">{skill.level}%</p>
                 </CardContent>
               </Card>
             ))}
           </div>
           
-          <Card className="bg-card border-border text-center">
-            <CardContent className="p-8">
-              <Code2 className="text-green-bright mx-auto mb-4" size={32} />
-              <h3 className="text-xl font-semibold mb-2">Currently Learning</h3>
-              <p className="text-muted-foreground">Backend Development</p>
-              <p className="text-sm text-green-bright mt-2">Expanding to full-stack capabilities</p>
-            </CardContent>
-          </Card>
+          {/* Currently Learning Section */}
+          <div className="max-w-2xl mx-auto">
+            <Card className="bg-gradient-to-br from-green-bright/10 to-green-600/10 border-green-bright/30 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-green-bright/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Code2 className="text-green-bright" size={40} />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">Currently Exploring</h3>
+                <div className="inline-flex items-center space-x-3 bg-green-bright/20 px-6 py-3 rounded-full mb-4">
+                  <div className="w-3 h-3 bg-green-bright rounded-full animate-pulse"></div>
+                  <span className="text-xl font-semibold text-green-bright">Backend Development</span>
+                </div>
+                <p className="text-muted-foreground text-lg">
+                  Expanding my horizons to become a full-stack developer and build complete web solutions
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 section-padding">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-16 gradient-text">Portfolio</h2>
-          
-          <Card className="bg-card border-border">
-            <CardContent className="p-12">
-              <FolderOpen className="text-green-bright mx-auto mb-6" size={64} />
-              <h3 className="text-2xl font-semibold mb-4">Projects Coming Soon</h3>
-              <p className="text-muted-foreground mb-6">
-                Stay tuned for exciting projects that showcase my growing expertise in frontend development.
-              </p>
-              <p className="text-green-bright font-medium">
-                "Every expert was once a beginner. Every pro was once an amateur."
-              </p>
-            </CardContent>
-          </Card>
+      {/* Enhanced Portfolio Section */}
+      <section id="portfolio" className="py-20 section-padding relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-green-bright/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-green-600/5 rounded-full blur-3xl"></div>
         </div>
-      </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 section-padding bg-muted/20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-16 gradient-text">Get In Touch</h2>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">Portfolio</h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-green-bright to-green-600 mx-auto rounded-full mb-6"></div>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
-              <p className="text-muted-foreground mb-8">
-                I'm always open to discussing new opportunities, collaborations, or just having a chat about web development.
+          <Card className="bg-gradient-to-br from-card/80 to-card/40 border-green-bright/20 backdrop-blur-sm">
+            <CardContent className="p-16">
+              {/* Animated Icon */}
+              <div className="relative mb-8">
+                <div className="w-32 h-32 mx-auto bg-gradient-to-br from-green-bright/20 to-green-600/20 rounded-full flex items-center justify-center">
+                  <FolderOpen className="text-green-bright" size={64} />
+                </div>
+                <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-bright/30 rounded-full animate-ping"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-green-600/30 rounded-full animate-pulse"></div>
+              </div>
+              
+              <h3 className="text-4xl font-bold mb-6">Amazing Projects Coming Soon</h3>
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                I'm currently working on exciting projects that will showcase my growing expertise 
+                in frontend development. Each project will demonstrate different aspects of modern web development.
               </p>
               
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Mail className="text-green-bright" size={20} />
-                  <span>aryanpandit1017@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="text-green-bright" size={20} />
-                  <span>8439401407</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Linkedin className="text-green-bright" size={20} />
-                  <span>LinkedIn - Aryan Sharma</span>
-                </div>
+              {/* Coming Soon Features */}
+              <div className="grid md:grid-cols-3 gap-6 mb-10">
+                {[
+                  { icon: Globe, title: "Web Applications", desc: "Interactive user experiences" },
+                  { icon: Smartphone, title: "Responsive Design", desc: "Mobile-first approach" },
+                  { icon: Palette, title: "UI/UX Focus", desc: "Beautiful & functional" }
+                ].map((item, index) => (
+                  <div key={index} className="flex flex-col items-center p-4 bg-muted/20 rounded-xl border border-green-bright/10">
+                    <div className="w-12 h-12 bg-green-bright/20 rounded-full flex items-center justify-center mb-3">
+                      <item.icon className="text-green-bright" size={24} />
+                    </div>
+                    <h4 className="font-semibold mb-1">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground text-center">{item.desc}</p>
+                  </div>
+                ))}
               </div>
+              
+              {/* Inspirational Quote */}
+              <div className="bg-green-bright/10 border border-green-bright/20 rounded-2xl p-8">
+                <blockquote className="text-2xl font-medium text-green-bright mb-4">
+                  "Every expert was once a beginner. Every pro was once an amateur."
+                </blockquote>
+                <p className="text-muted-foreground">
+                  Stay tuned for the journey ahead — great things are coming!
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Enhanced Contact Section */}
+      <section id="contact" className="py-20 section-padding bg-muted/20 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,136,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,136,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">Let's Connect</h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-green-bright to-green-600 mx-auto rounded-full mb-6"></div>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              I'm always excited to discuss new opportunities, collaborations, or just chat about web development
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Left Column - Contact Info */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-3xl font-bold mb-6 text-green-bright">Get In Touch</h3>
+                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                  Whether you have a question, want to collaborate, or just want to say hello, 
+                  I'd love to hear from you. Let's create something amazing together!
+                </p>
+              </div>
+              
+              {/* Contact Methods */}
+              <div className="space-y-6">
+                {[
+                  { icon: Mail, label: "Email", value: "aryanpandit1017@gmail.com", link: "mailto:aryanpandit1017@gmail.com" },
+                  { icon: Phone, label: "Phone", value: "8439401407", link: "tel:8439401407" },
+                  { icon: Linkedin, label: "LinkedIn", value: "LinkedIn - Aryan Sharma", link: "#" }
+                ].map((contact, index) => (
+                  <Card key={index} className="group bg-card/60 border-border hover:border-green-bright/50 transition-all duration-300 hover:scale-105 cursor-pointer backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <a href={contact.link} className="flex items-center space-x-4">
+                        <div className="w-14 h-14 bg-green-bright/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <contact.icon className="text-green-bright" size={24} />
+                        </div>
+                        <div>
+                          <p className="text-sm text-muted-foreground font-medium">{contact.label}</p>
+                          <p className="text-lg font-semibold">{contact.value}</p>
+                        </div>
+                        <ArrowRight className="text-green-bright opacity-0 group-hover:opacity-100 transition-opacity duration-300 ml-auto" size={20} />
+                      </a>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Social Proof */}
+              <Card className="bg-gradient-to-br from-green-bright/10 to-green-600/10 border-green-bright/20 backdrop-blur-sm">
+                <CardContent className="p-6 text-center">
+                  <MessageCircle className="text-green-bright mx-auto mb-4" size={32} />
+                  <h4 className="font-semibold mb-2">Quick Response</h4>
+                  <p className="text-sm text-muted-foreground">
+                    I typically respond within 24 hours. Let's start the conversation!
+                  </p>
+                </CardContent>
+              </Card>
             </div>
             
-            <Card className="bg-card border-border">
-              <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <Input
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-background border-border focus:border-green-bright"
-                  />
-                  <Input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-background border-border focus:border-green-bright"
-                  />
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-background border-border focus:border-green-bright resize-none"
-                  />
+            {/* Right Column - Contact Form */}
+            <Card className="bg-card/80 border-green-bright/20 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-semibold mb-2">Send Message</h3>
+                  <p className="text-muted-foreground">Fill out the form below and I'll get back to you soon.</p>
+                </div>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-muted-foreground">Your Name</label>
+                    <Input
+                      name="name"
+                      placeholder="Enter your full name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-background/50 border-border focus:border-green-bright transition-colors duration-300 h-12"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-muted-foreground">Email Address</label>
+                    <Input
+                      name="email"
+                      type="email"
+                      placeholder="your.email@example.com"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-background/50 border-border focus:border-green-bright transition-colors duration-300 h-12"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-muted-foreground">Message</label>
+                    <Textarea
+                      name="message"
+                      placeholder="Tell me about your project or just say hello..."
+                      rows={6}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-background/50 border-border focus:border-green-bright transition-colors duration-300 resize-none"
+                    />
+                  </div>
+
                   <Button 
                     type="submit" 
-                    className="w-full bg-green-bright hover:bg-green-600 text-black font-semibold py-3 rounded-full transition-all duration-300 hover:scale-105"
+                    className="w-full bg-green-bright hover:bg-green-600 text-black font-semibold py-4 rounded-xl transition-all duration-300 hover:scale-105 text-lg"
                   >
-                    Send Message
+                    <span className="flex items-center justify-center space-x-2">
+                      <span>Send Message</span>
+                      <ArrowRight size={20} />
+                    </span>
                   </Button>
                 </form>
               </CardContent>
@@ -371,11 +549,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 section-padding border-t border-border text-center">
-        <p className="text-muted-foreground">
-          © 2024 Aryan Sharma. Built with passion and precision.
-        </p>
+      {/* Enhanced Footer */}
+      <footer className="py-12 section-padding border-t border-border/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-bright/5 via-transparent to-green-600/5"></div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="mb-6">
+            <div className="text-2xl font-bold gradient-text mb-2">Aryan Sharma</div>
+            <p className="text-muted-foreground">Frontend Developer • B.Tech Student • Future Full-Stack Developer</p>
+          </div>
+          
+          <div className="h-px bg-gradient-to-r from-transparent via-green-bright/50 to-transparent mb-6"></div>
+          
+          <p className="text-muted-foreground">
+            © 2024 Aryan Sharma. Built with passion, precision, and lots of ☕
+          </p>
+        </div>
       </footer>
     </div>
   );
