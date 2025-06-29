@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -96,7 +97,7 @@ const Index = () => {
           </div>
           
           {/* Profile Picture with Enhanced Design */}
-          <div className="relative mb-8 inline-block">
+          <div className="relative mb-8 inline-block mt-8">
             <div className="w-40 h-40 mx-auto rounded-full flex items-center justify-center relative overflow-hidden group">
               {/* Rotating border */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-bright via-transparent to-green-bright opacity-75 animate-spin" style={{ animationDuration: '3s' }}></div>
@@ -573,3 +574,4 @@ const Index = () => {
 };
 
 export default Index;
+
