@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -96,17 +97,18 @@ const Index = () => {
           
           {/* Profile Picture with Enhanced Design */}
           <div className="relative mb-8 inline-block">
-            <div className="w-40 h-40 mx-auto bg-gradient-to-br from-green-bright to-green-600 rounded-full flex items-center justify-center relative overflow-hidden group">
-              {/* Inner glow effect */}
-              <div className="absolute inset-2 bg-gradient-to-br from-green-bright/20 to-transparent rounded-full"></div>
-              
+            <div className="w-40 h-40 mx-auto rounded-full flex items-center justify-center relative overflow-hidden group">
               {/* Rotating border */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-bright via-transparent to-green-bright opacity-75 animate-spin" style={{ animationDuration: '3s' }}></div>
               <div className="absolute inset-1 bg-background rounded-full"></div>
               
-              {/* Profile content */}
-              <div className="relative z-10 w-32 h-32 bg-gradient-to-br from-green-bright to-green-600 rounded-full flex items-center justify-center">
-                <User size={48} className="text-black" />
+              {/* Profile Image */}
+              <div className="relative z-10 w-32 h-32 rounded-full overflow-hidden border-2 border-green-bright/20">
+                <img 
+                  src="https://i.postimg.cc/wMjkDTTb/AARYAN.jpg" 
+                  alt="Aryan Sharma - Frontend Developer"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
