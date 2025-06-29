@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Linkedin, Github, Code, Palette, Smartphone, Globe, ChevronDown, User, BookOpen, Code2, FolderOpen, MessageCircle } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Code, Palette, Smartphone, Globe, ChevronDown, User, BookOpen, Code2, FolderOpen, MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -71,47 +71,120 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center section-padding">
-        <div className="text-center animate-fade-in">
-          <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-green-bright to-green-600 rounded-full flex items-center justify-center animate-pulse-green">
-            <User size={48} className="text-black" />
+      {/* Enhanced Hero Section */}
+      <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Animated Grid */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,136,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,136,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+          
+          {/* Gradient Orbs */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-bright/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-2 h-2 bg-green-bright rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute top-32 right-20 w-1 h-1 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
+          <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="text-center animate-fade-in relative z-10 max-w-4xl mx-auto">
+          {/* Status Badge */}
+          <div className="inline-flex items-center space-x-2 bg-green-bright/10 border border-green-bright/20 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
+            <div className="w-2 h-2 bg-green-bright rounded-full animate-pulse"></div>
+            <span className="text-sm text-green-bright font-medium">Available for opportunities</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            <span className="gradient-text">Aryan Sharma</span>
-          </h1>
+          {/* Profile Picture with Enhanced Design */}
+          <div className="relative mb-8 inline-block">
+            <div className="w-40 h-40 mx-auto bg-gradient-to-br from-green-bright to-green-600 rounded-full flex items-center justify-center relative overflow-hidden group">
+              {/* Inner glow effect */}
+              <div className="absolute inset-2 bg-gradient-to-br from-green-bright/20 to-transparent rounded-full"></div>
+              
+              {/* Rotating border */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-bright via-transparent to-green-bright opacity-75 animate-spin" style={{ animationDuration: '3s' }}></div>
+              <div className="absolute inset-1 bg-background rounded-full"></div>
+              
+              {/* Profile content */}
+              <div className="relative z-10 w-32 h-32 bg-gradient-to-br from-green-bright to-green-600 rounded-full flex items-center justify-center">
+                <User size={48} className="text-black" />
+              </div>
+            </div>
+            
+            {/* Floating icons */}
+            <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-bright/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-green-bright/30">
+              <Sparkles size={16} className="text-green-bright" />
+            </div>
+          </div>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-2">
-            Frontend Developer
+          {/* Main Heading with Enhanced Typography */}
+          <div className="mb-6">
+            <h1 className="text-6xl md:text-8xl font-bold mb-2 tracking-tight">
+              <span className="gradient-text block">Aryan</span>
+              <span className="gradient-text block">Sharma</span>
+            </h1>
+            
+            <div className="flex items-center justify-center space-x-4 mt-4">
+              <div className="h-px bg-gradient-to-r from-transparent via-green-bright to-transparent w-20"></div>
+              <p className="text-xl md:text-2xl text-green-bright font-semibold tracking-wide">
+                Frontend Developer
+              </p>
+              <div className="h-px bg-gradient-to-r from-transparent via-green-bright to-transparent w-20"></div>
+            </div>
+          </div>
+          
+          {/* Enhanced Description */}
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            Crafting exceptional digital experiences with 
+            <span className="text-green-bright font-medium"> modern technologies</span> and 
+            <span className="text-green-bright font-medium"> creative vision</span>
           </p>
+
+          {/* Tech Stack Pills */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {['React', 'JavaScript', 'CSS', 'HTML'].map((tech, index) => (
+              <div key={tech} className="px-4 py-2 bg-muted/20 border border-green-bright/20 rounded-full text-sm text-green-bright backdrop-blur-sm hover:bg-green-bright/10 transition-colors duration-300" style={{ animationDelay: `${index * 0.1}s` }}>
+                {tech}
+              </div>
+            ))}
+          </div>
           
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Building beautiful web experiences with passion and precision.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Enhanced CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
               onClick={() => scrollToSection('portfolio')}
-              className="bg-green-bright hover:bg-green-600 text-black font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 glow-effect"
+              className="group bg-green-bright hover:bg-green-600 text-black font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 glow-effect relative overflow-hidden"
             >
-              Explore My Work
+              <span className="relative z-10 flex items-center space-x-2">
+                <span>Explore My Work</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-bright to-green-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
+            
             <Button 
               variant="outline" 
               onClick={() => scrollToSection('contact')}
-              className="border-green-bright text-green-bright hover:bg-green-bright hover:text-black px-8 py-3 rounded-full transition-all duration-300"
+              className="group border-2 border-green-bright/50 text-green-bright hover:bg-green-bright hover:text-black px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 backdrop-blur-sm"
             >
-              Get In Touch
+              <span className="flex items-center space-x-2">
+                <span>Get In Touch</span>
+                <MessageCircle size={16} className="group-hover:rotate-12 transition-transform duration-300" />
+              </span>
             </Button>
           </div>
           
-          <div className="mt-16">
-            <ChevronDown 
-              size={32} 
-              className="mx-auto animate-bounce text-green-bright cursor-pointer"
-              onClick={() => scrollToSection('about')}
-            />
+          {/* Enhanced Scroll Indicator */}
+          <div className="flex flex-col items-center space-y-2">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider">Scroll to explore</span>
+            <div className="relative">
+              <ChevronDown 
+                size={32} 
+                className="text-green-bright cursor-pointer hover:text-green-400 transition-colors duration-300 animate-bounce"
+                onClick={() => scrollToSection('about')}
+              />
+              <div className="absolute inset-0 bg-green-bright/20 rounded-full blur-xl animate-pulse"></div>
+            </div>
           </div>
         </div>
       </section>
