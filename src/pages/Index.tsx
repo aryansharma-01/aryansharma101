@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Linkedin, Github, Code, Palette, Smartphone, Globe, ChevronDown, User, BookOpen, Code2, FolderOpen, MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Code, Palette, Smartphone, Globe, ChevronDown, User, BookOpen, Code2, FolderOpen, MessageCircle, ArrowRight, Sparkles, Cloud, ExternalLink, Zap } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -374,57 +374,121 @@ const Index = () => {
           <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-green-600/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="mb-16">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-4 gradient-text">Portfolio</h2>
             <div className="h-1 w-24 bg-gradient-to-r from-green-bright to-green-600 mx-auto rounded-full mb-6"></div>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Explore my latest projects and see how I bring ideas to life with code
+            </p>
           </div>
           
-          <Card className="bg-gradient-to-br from-card/80 to-card/40 border-green-bright/20 backdrop-blur-sm">
-            <CardContent className="p-16">
-              {/* Animated Icon */}
-              <div className="relative mb-8">
-                <div className="w-32 h-32 mx-auto bg-gradient-to-br from-green-bright/20 to-green-600/20 rounded-full flex items-center justify-center">
-                  <FolderOpen className="text-green-bright" size={64} />
-                </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-bright/30 rounded-full animate-ping"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-green-600/30 rounded-full animate-pulse"></div>
-              </div>
-              
-              <h3 className="text-4xl font-bold mb-6">Amazing Projects Coming Soon</h3>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-                I'm currently working on exciting projects that will showcase my growing expertise 
-                in frontend development. Each project will demonstrate different aspects of modern web development.
-              </p>
-              
-              {/* Coming Soon Features */}
-              <div className="grid md:grid-cols-3 gap-6 mb-10">
-                {[
-                  { icon: Globe, title: "Web Applications", desc: "Interactive user experiences" },
-                  { icon: Smartphone, title: "Responsive Design", desc: "Mobile-first approach" },
-                  { icon: Palette, title: "UI/UX Focus", desc: "Beautiful & functional" }
-                ].map((item, index) => (
-                  <div key={index} className="flex flex-col items-center p-4 bg-muted/20 rounded-xl border border-green-bright/10">
-                    <div className="w-12 h-12 bg-green-bright/20 rounded-full flex items-center justify-center mb-3">
-                      <item.icon className="text-green-bright" size={24} />
-                    </div>
-                    <h4 className="font-semibold mb-1">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground text-center">{item.desc}</p>
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Project 1 - Weather Page */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-bright to-green-bright/60 rounded-lg flex items-center justify-center">
+                    <Cloud className="w-6 h-6 text-white" />
                   </div>
-                ))}
-              </div>
-              
-              {/* Inspirational Quote */}
-              <div className="bg-green-bright/10 border border-green-bright/20 rounded-2xl p-8">
-                <blockquote className="text-2xl font-medium text-green-bright mb-4">
-                  "Every expert was once a beginner. Every pro was once an amateur."
-                </blockquote>
-                <p className="text-muted-foreground">
-                  Stay tuned for the journey ahead — great things are coming!
+                  <div>
+                    <h3 className="font-semibold text-foreground">Weather Page</h3>
+                    <p className="text-sm text-muted-foreground">JavaScript & API</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Dynamic weather application with real-time data fetching, location-based forecasts, and responsive design.
                 </p>
-              </div>
-            </CardContent>
-          </Card>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">JavaScript</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">HTML</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">CSS</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Weather API</span>
+                </div>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Live Demo
+                  </Button>
+                  <Button size="sm" variant="ghost" asChild>
+                    <a href="https://github.com/aryansharma-01/weather-page" target="_blank" rel="noopener noreferrer">
+                      <Github className="w-3 h-3 mr-1" />
+                      Code
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Project 2 */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-bright to-green-bright/60 rounded-lg flex items-center justify-center">
+                    <Code className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">E-Commerce Platform</h3>
+                    <p className="text-sm text-muted-foreground">React & Node.js</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">React</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Node.js</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">MongoDB</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Stripe</span>
+                </div>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Live Demo
+                  </Button>
+                  <Button size="sm" variant="ghost">
+                    <Github className="w-3 h-3 mr-1" />
+                    Code
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Project 3 */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-bright to-green-bright/60 rounded-lg flex items-center justify-center">
+                    <Smartphone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Task Management App</h3>
+                    <p className="text-sm text-muted-foreground">React Native</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Cross-platform mobile app for team collaboration with real-time sync and offline capabilities.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">React Native</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">TypeScript</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Firebase</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Redux</span>
+                </div>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Live Demo
+                  </Button>
+                  <Button size="sm" variant="ghost">
+                    <Github className="w-3 h-3 mr-1" />
+                    Code
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
