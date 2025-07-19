@@ -393,7 +393,7 @@ const Index = () => {
                     <Cloud className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Weather Page</h3>
+                    <h3 className="font-semibold text-foreground">Weather App</h3>
                     <p className="text-sm text-muted-foreground">JavaScript & API</p>
                   </div>
                 </div>
@@ -421,26 +421,26 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Project 2 */}
+            {/* Project 2 - Portfolio Website */}
             <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-bright to-green-bright/60 rounded-lg flex items-center justify-center">
-                    <Code className="w-6 h-6 text-white" />
+                    <User className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">E-Commerce Platform</h3>
-                    <p className="text-sm text-muted-foreground">React & Node.js</p>
+                    <h3 className="font-semibold text-foreground">Portfolio Website</h3>
+                    <p className="text-sm text-muted-foreground">React & TypeScript</p>
                   </div>
                 </div>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.
+                  Modern portfolio website with responsive design, smooth animations, and optimized performance.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">React</span>
-                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Node.js</span>
-                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">MongoDB</span>
-                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Stripe</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">TypeScript</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Tailwind CSS</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Framer Motion</span>
                 </div>
                 <div className="flex gap-2">
                   <Button size="sm" variant="outline" className="flex-1">
@@ -455,7 +455,109 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            {/* Project 3 */}
+            {/* Project 3 - E-commerce Website */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-bright to-green-bright/60 rounded-lg flex items-center justify-center">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">E-commerce Site</h3>
+                    <p className="text-sm text-muted-foreground">HTML, CSS & JS</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Responsive e-commerce website with product catalog, shopping cart, and modern UI components.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">HTML5</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">CSS3</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">JavaScript</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Bootstrap</span>
+                </div>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Live Demo
+                  </Button>
+                  <Button size="sm" variant="ghost">
+                    <Github className="w-3 h-3 mr-1" />
+                    Code
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Project 4 - Task Manager */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-bright to-green-bright/60 rounded-lg flex items-center justify-center">
+                    <Code2 className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Task Manager</h3>
+                    <p className="text-sm text-muted-foreground">React & Local Storage</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Interactive task management app with drag-and-drop functionality and local data persistence.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">React</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">JavaScript</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">CSS Modules</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Local Storage</span>
+                </div>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Live Demo
+                  </Button>
+                  <Button size="sm" variant="ghost">
+                    <Github className="w-3 h-3 mr-1" />
+                    Code
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Project 5 - Landing Page */}
+            <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-bright to-green-bright/60 rounded-lg flex items-center justify-center">
+                    <Palette className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">Business Landing</h3>
+                    <p className="text-sm text-muted-foreground">HTML, CSS & JS</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-4 leading-relaxed">
+                  Professional business landing page with animations, contact forms, and mobile-first design.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">HTML</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">CSS</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">JavaScript</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">GSAP</span>
+                </div>
+                <div className="flex gap-2">
+                  <Button size="sm" variant="outline" className="flex-1">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Live Demo
+                  </Button>
+                  <Button size="sm" variant="ghost">
+                    <Github className="w-3 h-3 mr-1" />
+                    Code
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Project 6 - Calculator App */}
             <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-green-bright/30">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
@@ -463,18 +565,18 @@ const Index = () => {
                     <Smartphone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground">Task Management App</h3>
-                    <p className="text-sm text-muted-foreground">React Native</p>
+                    <h3 className="font-semibold text-foreground">Calculator App</h3>
+                    <p className="text-sm text-muted-foreground">JavaScript & CSS</p>
                   </div>
                 </div>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Cross-platform mobile app for team collaboration with real-time sync and offline capabilities.
+                  Interactive calculator with advanced functions, keyboard support, and sleek modern interface.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">React Native</span>
-                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">TypeScript</span>
-                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Firebase</span>
-                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Redux</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">JavaScript</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">CSS Grid</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">HTML</span>
+                  <span className="px-2 py-1 bg-green-bright/10 text-green-bright text-xs rounded-md">Responsive</span>
                 </div>
                 <div className="flex gap-2">
                   <Button size="sm" variant="outline" className="flex-1">
